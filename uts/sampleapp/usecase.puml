@@ -1,0 +1,47 @@
+@startuml
+
+!define RECTANGLE class
+
+actor Admin
+actor Dosen
+actor Mahasiswa
+
+usecase "Pengelolaan Fakultas" as UC1
+usecase "Pengelolaan Program Studi" as UC2
+usecase "Pengelolaan Dosen" as UC3
+usecase "Pengelolaan Mahasiswa" as UC4
+usecase "Melihat Data Mahasiswa" as UC5
+usecase "Mengelola Kelas" as UC6
+usecase "Melihat Program Studi" as UC7
+usecase "Mendaftar Program Studi" as UC8
+usecase "Mengupdate Informasi Pribadi" as UC9
+usecase "Login" as UC10
+usecase "Data Disimpan" as UC11
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+
+Dosen --> UC5
+Dosen --> UC6
+
+Mahasiswa --> UC7
+Mahasiswa --> UC8
+Mahasiswa --> UC9
+
+UC10 --> Admin
+UC10 --> Dosen
+UC10 --> Mahasiswa
+
+UC1 -down-> UC11
+UC2 -down-> UC11
+UC3 -down-> UC11
+UC4 -down-> UC11
+UC5 -down-> UC11
+UC6 -down-> UC11
+UC7 -down-> UC11
+UC8 -down-> UC11
+UC9 -down-> UC11
+
+@enduml

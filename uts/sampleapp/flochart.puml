@@ -1,0 +1,45 @@
+@startuml
+!define RECTANGLE class
+
+start
+
+:Login;
+
+if (Keputusan: Admin, Dosen, Mahasiswa?) then (Admin)
+    :Pengelolaan Fakultas;
+    :Tambah Fakultas;
+    :Ubah Fakultas;
+    :Hapus Fakultas;
+
+    :Pengelolaan Program Studi;
+    :Tambah Program Studi;
+    :Ubah Program Studi;
+    :Hapus Program Studi;
+
+    :Pengelolaan Dosen;
+    :Tambah Dosen;
+    :Ubah Dosen;
+    :Hapus Dosen;
+
+    :Pengelolaan Mahasiswa;
+    :Tambah Mahasiswa;
+    :Ubah Mahasiswa;
+    :Hapus Mahasiswa;
+
+elseif (Dosen)
+    :Melihat Data Mahasiswa;
+    :Mengelola Kelas;
+    :Tambah Kelas;
+    :Ubah Kelas;
+    :Hapus Kelas;
+
+else (Mahasiswa)
+    :Melihat Program Studi;
+    :Mendaftar Program Studi;
+    :Mengupdate Informasi Pribadi;
+endif
+
+:Data Disimpan;
+
+stop
+@enduml
